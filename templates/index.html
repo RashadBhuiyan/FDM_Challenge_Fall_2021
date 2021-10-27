@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/static/assets/stylesheets/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="/static/assets/scripts/main.js"></script>
+        <script src="/static/assets/scripts/slideshow.js"></script>
+        <script src="/static/assets/scripts/lightbox.js"></script>
+        <meta charset="UTF-8">
+        <title>FDM Marketplace</title>
+    </head>
+    <body class="background">
+        <header>
+            <nav>
+                <div class="topnav" id="myTopnav">
+                    <a href="/" class="active">Home</a>
+                    <a href="{{ url_for('shop') }}">Buy</a>
+                    <a href="{{ url_for('private') }}">Sell</a>
+                    </a>
+                </div> 
+            </nav>
+        </header>
+        <h2 class="upperLabel">Sample Products</h2>
+        <div class="slideshow-container">
+            <!-- Full width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="imageRow">
+                    <div class="imageColumn">
+                        <img src="/static/assets/images/redcivic.jpg" alt="cremechii" class="slideshowImage" onclick="openModal();currentLightbox(1)">
+                    </div>
+                    <div class="imageColumn">
+                        <img src="/static/assets/images/hat.jpg" alt="Evybenita" class="slideshowImage" onclick="openModal();currentLightbox(2)">
+                    </div>
+                    <div class="imageColumn">
+                        <img src="/static/assets/images/kitchenutensils.jpg" alt="Hellomango" class="slideshowImage" onclick="openModal();currentLightbox(3)">
+                    </div>
+                    <div class="imageColumn">
+                        <img src="/static/assets/images/elephanttoy.jpg" alt="Hellomango" class="slideshowImage" onclick="openModal();currentLightbox(4)">
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="imageRow">
+                    <div class="imageColumn">
+                        <img src="/static/assets/images/whiteshirt.jpg" alt="cremechii" class="slideshowImage" onclick="openModal();currentLightbox(5)">
+                    </div>
+                    <div class="imageColumn">
+                        <img src="/static/assets/images/blacksuit.jpg" alt="Evybenita" class="slideshowImage" onclick="openModal();currentLightbox(6)">
+                    </div>
+                    <div class="imageColumn">
+                        <img src="/static/assets/images/blackiphone.jpg" alt="Hellomango" class="slideshowImage" onclick="openModal();currentLightbox(7)">
+                    </div>
+                    <div class="imageColumn">
+                        <img src="/static/assets/images/greennotebook.jpg" alt="Hellomango" class="slideshowImage" onclick="openModal();currentLightbox(8)">
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="imageRow">
+                    <div class="imageColumn">
+                        <img src="/static/assets/images/starrynight.jpg" alt="cremechii" class="slideshowImage" onclick="openModal();currentLightbox(9)">
+                    </div>
+                    <div class="imageColumn">
+                        <img src="/static/assets/images/camera.jpg" alt="Evybenita" class="slideshowImage" onclick="openModal();currentLightbox(10)">
+                    </div>
+                    <div class="imageColumn">
+                        <img src="/static/assets/images/cat.jpg" alt="Hellomango" class="slideshowImage" onclick="openModal();currentLightbox(11)">
+                    </div>
+                    <div class="imageColumn">
+                        <img src="/static/assets/images/legos.jpeg" alt="Hellomango" class="slideshowImage" onclick="openModal();currentLightbox(12)">
+                    </div>
+                </div>
+            </div>
+
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                    <div class="lightboxSlides">
+                        <img src="/static/assets/images/redcivic.jpg" alt="cremechii" class="light">
+                    </div>
+                    <div class="lightboxSlides">
+                        <img src="/static/assets/images/hat.jpg" alt="cremechii" class="light">
+                    </div>
+                    <div class="lightboxSlides">
+                        <img src="/static/assets/images/kitchenutensils.jpg" alt="cremechii" class="light">
+                    </div>
+                    <div class="lightboxSlides">
+                        <img src="/static/assets/images/elephanttoy.jpg" alt="cremechii" class="light">
+                    </div>
+                    <div class="lightboxSlides">
+                        <img src="/static/assets/images/whiteshirt.jpg" alt="cremechii" class="light">
+                    </div>
+                    <div class="lightboxSlides">
+                        <img src="/static/assets/images/blacksuit.jpg" alt="cremechii" class="light">
+                    </div>
+                    <div class="lightboxSlides">
+                        <img src="/static/assets/images/blackiphone.jpg" alt="cremechii" class="light">
+                    </div>
+                    <div class="lightboxSlides">
+                        <img src="/static/assets/images/greennotebook.jpg" alt="cremechii" class="light">
+                    </div>
+                    <div class="lightboxSlides">
+                        <img src="/static/assets/images/starrynight.jpg" alt="cremechii" class="light">
+                    </div>
+                    <div class="lightboxSlides">
+                        <img src="/static/assets/images/camera.jpg" alt="cremechii" class="light">
+                    </div>
+                    <div class="lightboxSlides">
+                        <img src="/static/assets/images/cat.jpg" alt="cremechii" class="light">
+                    </div>
+                    <div class="lightboxSlides">
+                        <img src="/static/assets/images/legos.jpeg" alt="cremechii" class="light">
+                    </div>
+
+                    <!-- Next/previous controls -->
+                    <a class="prevL" onclick="plusLightbox(-1)">&#10094;</a>
+                    <a class="nextL" onclick="plusLightbox(1)">&#10095;</a>
+                </div>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <br>
+        <br>
+
+
+        <script>
+            var slideIndex = 1;
+            var lightboxIndex = 1;
+            showSlides(slideIndex);
+        </script>
+        <footer>
+            <div class="bnavbar">
+                <div class="newRow">
+                    <div class="logoCol">
+                        <img src="/static/assets/images/Logo.PNG" alt="MimiCaramel.Co" class="logo">
+                    </div>
+                    <div class="newCol">
+                        <a href="https://www.instagram.com/mimicaramel.co/"><i class="fa fa-instagram"></i> @fdmmarketplace</a>
+                        <a href="mailto:contact@fdmmarketplace.com"><i class="fa fa-google"></i> contact@fdmmarketplace.com</a>
+                        <a href="">FAQ</a>
+                    </div>
+                    <div class="newCol">
+                        <a href="{{ url_for('shop') }}">Buy</a>
+                        <a href="{{ url_for('private') }}">Sell</a>
+                    </div>
+                    <div class="newCol">
+                        <a href="">Created by: Rashad Bhuiyan <br><br> William Song <br><br> Myko Smid</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

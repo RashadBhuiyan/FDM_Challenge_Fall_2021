@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/static/assets/stylesheets/main.css">
+    <link rel="stylesheet" href="/static/assets/stylesheets/private.css"> 
+    <script src="/static/assets/scripts/main.js"></script>
+    <script src="/static/assets/scripts/modal.js"></script>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body class="background">
+    <header>
+        <nav>
+            <div class="topnav" id="myTopnav">
+                <a href="/">Home</a>
+                <a href="{{ url_for('shop') }}">Buy</a>
+                <a href="{{ url_for('private') }}" class="active">Sell</a>
+            </div> 
+        </nav>
+    </header>
+
+
+
+<div class="sellform">
+  <h1>Sell Items</h1>
+  <form action="submit.html" method="POST" enctype="multipart/form-data">
+    <label for="title">Ad Title</label>
+    <input type="text" id="title" name="title" placeholder="Title..." required>
+
+
+    <label for="price">Enter Price</label><br>
+    <input type="number" name="price" id="price" placeholder="$" required><br><br>
+    
+    <label for="category">Category</label>
+    <select id="category" name="category">
+      <option value="all">All</option>
+      <option value="collectibles">Collectibles & Art</option>
+      <option value="electronics">Electronics</option>
+      <option value="entertainment">Entertainment Memorabilia</option>
+      <option value="fashion">Fashion</option>
+      <option value="home">Home & Garden</option>
+      <option value="motors">Motors</option>
+      <option value="sport">Sporting Goods</option>
+      <option value="toys">Toys & Hobbies</option>
+      <option value="other">Other</option>
+    </select><br>
+
+    <label for="condition">Condition</label>
+    <select id="condition" name="condition">
+      <option value="select">Select</option>
+      <option value="new">New</option>
+      <option value="used_new">Used - Like New</option>
+      <option value="used_good">Used - Good</option>
+      <option value="used_well">Well Used</option>
+    </select><br>
+
+    <label for="location">Location</label>
+    <input type="text" id="location" name="location" placeholder="Enter your location.." required>
+
+    <label for="item_image">Select an image of your item (png):</label>
+    <input type="file" id="item_image" name="item_image" accept="image/png" required><br><br>
+
+    <label for="subject">Description</label>
+    <textarea id="subject" name="subject" placeholder="Describe your item" style="height:200px" required></textarea>
+
+    <h4>Contact Info</h4>
+
+    <label for="email">Enter your email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Phone Number</label>
+    <input type="number" id="phone" name="phone" min="1000000000" max="9999999999" required><br><br>
+
+    <input type="submit" value="Submit">
+
+    
+  </form>
+</div>
+<footer>
+  <div class="bnavbar">
+      <div class="newRow">
+          <div class="logoCol">
+              <img src="/static/assets/images/Logo.PNG" alt="MimiCaramel.Co" class="logo">
+          </div>
+          <div class="newCol">
+              <a href="https://www.instagram.com/mimicaramel.co/"><i class="fa fa-instagram"></i> @fdmmarketplace</a>
+              <a href="mailto:contact@fdmmarketplace.com"><i class="fa fa-google"></i> contact@fdmmarketplace.com</a>
+              <a href="">FAQ</a>
+          </div>
+          <div class="newCol">
+              <a href="{{ url_for('shop') }}">Buy</a>
+              <a href="{{ url_for('private') }}">Sell</a>
+          </div>
+          <div class="newCol">
+              <a href="">Created by: Rashad Bhuiyan <br><br> William Song <br><br> Myko Smid</a>
+          </div>
+      </div>
+  </div>
+</footer>
+</body>
+</html>

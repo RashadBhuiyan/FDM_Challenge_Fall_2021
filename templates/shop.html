@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/static/assets/stylesheets/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/static/assets/stylesheets/products.css"> 
+        <script src="/static/assets/scripts/main.js"></script>
+        <script src="/static/assets/scripts/modal.js"></script>
+        <meta charset="UTF-8">
+        <title>Home</title>
+    </head>
+    <body class="background">
+        <header>
+            <nav>
+                <div class="topnav" id="myTopnav">
+                    <a href="/">Home</a>
+                    <a href="{{ url_for('shop') }}"  class="active">Buy</a>
+                    <a href="{{ url_for('private') }}">Sell</a>
+                </div> 
+            </nav>
+        </header>
+        <h2 class="upperLabel">Products</h2>
+        {% for product in products %}
+        <div class="prodRow">
+                <img src="{{ url_for('static', filename=product[5]) }}" alt="Product image" class="prodImage">
+            <h1>{{ product[0] }}</h1>
+            <p class="price">Location: {{ product[1] }} | Price: ${{ product[2] }}</p>
+            <p class="desc">Description: {{ product[3] }}</p>
+            <send_email><a href="{{ product[4] }}"> Send Email</a></send_email>
+        </div>
+        {% endfor %}
+        <footer>
+            <div class="bnavbar">
+                <div class="newRow">
+                    <div class="logoCol">
+                        <img src="/static/assets/images/Logo.PNG" alt="MimiCaramel.Co" class="logo">
+                    </div>
+                    <div class="newCol">
+                        <a href="https://www.instagram.com/mimicaramel.co/"><i class="fa fa-instagram"></i> @fdmmarketplace</a>
+                        <a href="mailto:contact@fdmmarketplace.com"><i class="fa fa-google"></i> contact@fdmmarketplace.com</a>
+                        <a href="">FAQ</a>
+                    </div>
+                    <div class="newCol">
+                        <a href="{{ url_for('shop') }}">Buy</a>
+                        <a href="{{ url_for('private') }}">Sell</a>
+                    </div>
+                    <div class="newCol">
+                        <a href="">Created by: Rashad Bhuiyan <br><br> William Song <br><br> Myko Smid</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

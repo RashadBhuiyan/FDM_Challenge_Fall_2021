@@ -1,0 +1,471 @@
+html, body, div, span, applet, object, iframe,
+blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+img {
+  float:left;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  padding: 12px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #4ca7e4;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #ffffff;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #284185;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1100px) {
+  .topnav a {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1100px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive div {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* bottom navbar */
+.bnavbar {
+  background-color: #333;
+  overflow: hidden;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.bnavbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 12px;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+/* Change the color of links on hover */
+.bnavbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.newRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.newCol {
+  float: left;
+  width: 27%;
+  background-color: #4ca7e4;
+  height: 120px;
+}
+
+.newCol a {
+  float: none;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.newCol a:hover {
+  background-color: #284185;
+  color: #ffffff;
+}
+
+.logoCol {
+  float: left;
+  width: 19%;
+  background-color: #4ca7e4;
+  height: 120px;
+}
+
+.logoCol a {
+  float: none;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.logoCol a:hover {
+  background-color: #284185;
+  color: #ffffff;
+}
+
+.logo {
+  width: 69%;
+  height: 85%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+}
+
+/* Slideshow CSS */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1280;
+  height: 350px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 16px;
+  color: #4ca7e4;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: white;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+img.slideshowImage {
+  transition: 0.3s;
+}
+
+.slideshowImage {
+  width: 95%;
+  vertical-align:top;
+  margin-left: 2%;
+  border-radius:25%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+}
+
+.slideshowImage:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.29);
+}
+
+.imageColumn {
+  float: left;
+  width: 25%;
+}
+
+.imageRow:after {
+  content: "";
+  clear: both;
+  display:block;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 2000px;
+  max-height: 750px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.lightboxSlides {
+  display: none;
+}
+
+.light {
+  width: 100%;
+  border-radius:25%;
+}
+
+/* Next & previous buttons */
+.prevL,
+.nextL {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.nextL {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prevL:hover,
+.nextL:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.wordColumn1 {
+  float: left;
+  width: 50%;
+}
+
+.wordColumn2 {
+  float: left;
+  width: 50%;
+}
+
+.wordRow:after {
+  content: "";
+  clear: both;
+  display:block;
+}
+
+.container {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: #4ca7e4;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.InfoContainer {
+  border: 20px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.news {
+  max-width: 600px;
+  max-height: 600px;
+  width: 100%;
+  vertical-align: middle;
+  margin-top: 10px;
+  border-radius: 20%;
+}
+
+.Label1 {
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+  color: #4ca7e4;
+  text-indent: 40%;
+  margin-top: 2%;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.Label2 {
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+  color: #4ca7e4;
+  text-indent: 46%;
+  margin-top: 2%;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.upperLabel {
+  text-align: left;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #4ca7e4;
+  text-indent: 5%;
+  margin-top: 2%;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.announce {
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.words {
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+  color: white;
+}
+
+.moreInfo {
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+  color: white;
+}
+
+.moreInfo:hover {
+  color: pink;
+}
+
+.background {
+  background-image: url('../images/background.PNG');
+}
