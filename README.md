@@ -1,2 +1,2 @@
-# MimiCaramel.Co
-The website data for MimiCaramel.Co, a sticker prints and cuts service + private commission website!
+# FDM Challenge Fall 2021
+A simple website created using HTML and CSS while implementing a Python Flask REST API and a SQLite database.
